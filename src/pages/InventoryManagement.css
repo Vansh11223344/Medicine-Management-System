@@ -1,0 +1,131 @@
+/* Inventory Management Container */
+.inventory-management {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Title */
+  .inventory-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  .dark .inventory-title {
+    color: #fff;
+  }
+  
+  /* Add Medicine Form */
+  .add-medicine-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .add-medicine-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .add-button {
+    background-color: #10b981;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .add-button:hover {
+    background-color: #059669;
+  }
+  
+  /* Inventory Table */
+  .inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .dark .inventory-table th,
+  .dark .inventory-table td {
+    color: #d1d5db;
+  }
+  
+  .inventory-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .dark .inventory-table th {
+    background-color: #4b5563;
+  }
+  
+  /* Action Buttons */
+  .edit-button,
+  .remove-button,
+  .save-button {
+    border: none;
+    padding: 8px;
+    margin: 2px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .edit-button {
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .edit-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .save-button {
+    background-color: #22c55e;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .save-button:hover {
+    background-color: #16a34a;
+  }
+  
+  .remove-button {
+    background-color: #ef4444bb;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .remove-button:hover {
+    background-color: #dc2626;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .add-medicine-form {
+      flex-direction: column;
+    }
+  
+    .add-medicine-form input {
+      width: 100%;
+    }
+  
+    .inventory-table {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,64 @@
+.prescription-order {
+    padding: 20px;
+  }
+  
+  .order-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .dark .order-title {
+    color: #fff;
+  }
+  
+  .order-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .order-card {
+    background-color: #374151;
+  }
+  
+  .order-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .dark .order-card h3 {
+    color: #fff;
+  }
+  
+  .order-list {
+    list-style: none;
+    margin-bottom: 15px;
+  }
+  
+  .order-list li {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+  }
+  
+  .dark .order-list li {
+    color: #d1d5db;
+  }
+  
+  .order-button {
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .order-button:hover {
+    background-color: #2563eb;
+  }
