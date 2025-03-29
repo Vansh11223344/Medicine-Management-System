@@ -1,64 +1,354 @@
+:root {
+  --primary: #4f46e5;
+  --primary-light: #6366f1;
+  --primary-dark: #4338ca;
+  --secondary: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --bg-light: #ffffff;
+  --bg-dark: #111827;
+  --card-dark: #374151;
+  --border-light: #e5e7eb;
+  --border-dark: #4b5563;
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --transition: all 0.15s ease;
+}
+
+/* Base Styles */
 .prescription-order {
-    padding: 20px;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-primary);
+}
+
+/* Header Styles */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.order-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary);
+}
+
+.new-prescription-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.new-prescription-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+/* Order Container */
+.order-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .order-container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Cards */
+.order-card,
+.prescription-card {
+  background-color: var(--bg-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.items-count {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  background-color: var(--secondary);
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+}
+
+/* Order List */
+.order-list {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.order-item:hover {
+  background-color: var(--secondary);
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.item-name {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.item-quantity {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.item-price {
+  font-weight: 600;
+}
+
+/* Order Summary */
+.order-summary {
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9375rem;
+}
+
+.summary-row.total {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+/* Order Button */
+.order-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.order-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.order-button:active {
+  transform: translateY(0);
+}
+
+.arrow-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+}
+
+/* Prescription List */
+.prescription-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.prescription-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.prescription-item:hover {
+  background-color: var(--secondary);
+}
+
+.prescription-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.prescription-doctor {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.prescription-date {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.prescription-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+}
+
+.status-badge.active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.expired {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Dark Mode Styles */
+.dark .prescription-order {
+  background-color: var(--bg-dark);
+  color: #f3f4f6;
+}
+
+.dark .order-card,
+.dark .prescription-card {
+  background-color: var(--card-dark);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.dark .card-header {
+  border-bottom-color: var(--border-dark);
+}
+
+.dark .items-count {
+  background-color: #4b5563;
+  color: #d1d5db;
+}
+
+.dark .order-item:hover,
+.dark .prescription-item:hover {
+  background-color: #4b5563;
+}
+
+.dark .order-summary {
+  border-color: var(--border-dark);
+}
+
+.dark .summary-row.total {
+  color: #a5b4fc;
+}
+
+.dark .status-badge.active {
+  background-color: #064e3b;
+  color: #6ee7b7;
+}
+
+.dark .status-badge.expired {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
   
-  .order-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
+  .new-prescription-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .prescription-order {
+    padding: 1rem;
   }
   
-  .dark .order-title {
-    color: #fff;
+  .order-button,
+  .new-prescription-btn {
+    padding: 0.75rem 1rem;
   }
-  
-  .order-card {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dark .order-card {
-    background-color: #374151;
-  }
-  
-  .order-card h3 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .dark .order-card h3 {
-    color: #fff;
-  }
-  
-  .order-list {
-    list-style: none;
-    margin-bottom: 15px;
-  }
-  
-  .order-list li {
-    display: flex;
-    justify-content: space-between;
-    color: #666;
-  }
-  
-  .dark .order-list li {
-    color: #d1d5db;
-  }
-  
-  .order-button {
-    background-color: #3b82f6;
-    color: #fff;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .order-button:hover {
-    background-color: #2563eb;
-  }
+}
