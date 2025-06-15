@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Register.css";
 
-const Register = () => {
+function Register ()  {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
-    role: "Patient"
+    role: ""
   });
 
   const handleChange = (e) => {
@@ -24,7 +24,7 @@ const Register = () => {
 
     try {
       // Make sure the backend API is running and accessible
-      const response = await axios.post("http://localhost:3000/api/clients", {
+      const response = await axios.post("http://localhost:5000/api/clients", {
         name: formData.name,
         email: formData.email,
         password: formData.password,
