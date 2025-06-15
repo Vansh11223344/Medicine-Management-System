@@ -21,4 +21,8 @@ app.use('/api', authRoutes); // All routes in auth.js will be prefixed with /api
 app.options('*', cors()); 
 app.use(express.json());
 const PORT = process.env.PORT || 5000;
+app.get("/test", (req, res) => {
+  res.send("Test route working!");
+});
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

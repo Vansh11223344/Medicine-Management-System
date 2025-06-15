@@ -24,7 +24,7 @@ function Register ()  {
 
     try {
       // Make sure the backend API is running and accessible
-      const response = await axios.post("http://localhost:5000/api/clients", {
+      const response = await axios.post("http://localhost:5000/api/login", {
         name: formData.name,
         email: formData.email,
         password: formData.password,
@@ -58,7 +58,7 @@ function Register ()  {
         </div>
         <div className="form-group">
           <label>Role</label>
-          <select name="role" value={formData.role} onChange={handleChange}>
+          <select zname="role" value={formData.role} onChange={handleChange}>
             <option>Patient</option>
             <option>Pharmacist</option>
             <option>Admin</option>
